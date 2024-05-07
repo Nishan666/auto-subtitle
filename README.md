@@ -4,9 +4,24 @@ This repository uses `ffmpeg` and [OpenAI's Whisper](https://openai.com/blog/whi
 
 ## Installation
 
+
+```bash
+python3 -m venv myenv
+
+#For Linux
+source myenv/bin/activate
+
+#for Windows
+myenv\Scripts\activate
+```
+
+
+
 To get started, you'll need Python 3.7 or newer. Install the binary by running the following command:
 
     pip install git+https://github.com/m1guelpf/auto-subtitle.git
+
+    pip install ffmpeg-python 
 
 You'll also need to install [`ffmpeg`](https://ffmpeg.org/), which is available from most package managers:
 
@@ -38,6 +53,12 @@ Adding `--task translate` will translate the subtitles into English:
 Run the following to view all available options:
 
     auto_subtitle --help
+
+## Bulk extraction for .srt file and also .vtt file
+
+```
+python3 nick.py <video_folder_path>
+```
 
 ## License
 
