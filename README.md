@@ -57,7 +57,9 @@ Run the following to view all available options:
 ## Bulk extraction for .srt file and also .vtt file
 
 ```
-python3 bulk.py <video_folder_path>
+wget https://raw.githubusercontent.com/Nishan666/auto-subtitle/main/bulk.py
+
+python3 bulk.py <video_folder_path> <model>
 ```
 
 ## License

@@ -1,29 +1,3 @@
-# Only Srt
-# import os
-
-# def extract_subtitles(video_folder, model="tiny"):
-#     # Iterate over all files in the video folder
-#     for filename in os.listdir(video_folder):
-#         if filename.endswith(".mp4"):
-#             # Construct input path
-#             input_path = os.path.join(video_folder, filename)
-            
-#             # Construct the command to extract subtitles
-#             command = f"auto_subtitle \"{input_path}\" --model {model} --srt_only True"
-            
-#             # Execute the command
-#             os.system(command)
-
-# if __name__ == "__main__":
-#     # Specify the video folder
-#     video_folder = "/home/nishan-7edge/auto-subtitle/test1"
-    
-#     # Extract subtitles for all video files in the folder
-#     extract_subtitles(video_folder)
-    
-#     print("Subtitles extracted successfully.")
-
-
 # srt and vtt
 import os
 import sys
@@ -67,12 +41,13 @@ def extract_subtitles(video_folder, model="tiny"):
 
 if __name__ == "__main__":
     # Specify the video folder
-    if len(sys.argv) != 2:
-        print("Usage: python3 bulk.py <video_folder_path>")
+    if len(sys.argv) != 3:
+        print("Usage: python3 bulk.py <video_folder_path> <model>")
         sys.exit(1)
     
     # Get the video folder path from the command line arguments
     video_folder = sys.argv[1]
+    model = sys.argv[2]
     
     # Check if the provided path is a directory
     if not os.path.isdir(video_folder):
@@ -80,6 +55,45 @@ if __name__ == "__main__":
         sys.exit(1)
     
     # Extract subtitles for all video files in the folder
-    extract_subtitles(video_folder)
+    extract_subtitles(video_folder,model)
+
     
     print("Subtitles extracted and converted successfully.")
+
+
+
+# Only Srt
+# import os
+
+# def extract_subtitles(video_folder, model="tiny"):
+#     # Iterate over all files in the video folder
+#     for filename in os.listdir(video_folder):
+#         if filename.endswith(".mp4"):
+#             # Construct input path
+#             input_path = os.path.join(video_folder, filename)
+            
+#             # Construct the command to extract subtitles
+#             command = f"auto_subtitle \"{input_path}\" --model {model} --srt_only True"
+            
+#             # Execute the command
+#             os.system(command)
+
+# if __name__ == "__main__":
+#     # Specify the video folder
+    # if len(sys.argv) != 3:
+    #     print("Usage: python3 bulk.py <video_folder_path> <model>")
+    #     sys.exit(1)
+    
+    # # Get the video folder path from the command line arguments
+    # video_folder = sys.argv[1]
+    # model = sys.argv[2]
+    
+    # # Check if the provided path is a directory
+    # if not os.path.isdir(video_folder):
+    #     print("Error: Provided path is not a directory.")
+    #     sys.exit(1)
+    
+    # # Extract subtitles for all video files in the folder
+    # extract_subtitles(video_folder,model)
+    
+#     print("Subtitles extracted successfully.")
