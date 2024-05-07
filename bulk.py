@@ -68,7 +68,7 @@ def extract_subtitles(video_folder, model="tiny"):
 if __name__ == "__main__":
     # Specify the video folder
     if len(sys.argv) != 2:
-        print("Usage: python3 nick.py <video_folder_path>")
+        print("Usage: python3 bulk.py <video_folder_path>")
         sys.exit(1)
     
     # Get the video folder path from the command line arguments

@@ -57,7 +57,7 @@ Run the following to view all available options:
 ## Bulk extraction for .srt file and also .vtt file
 
 ```
-python3 nick.py <video_folder_path>
+python3 bulk.py <video_folder_path>
 ```
 
 ## License
